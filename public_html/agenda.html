@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!--
+Instituto Federal de Educação Ciências e Tecnologia da Paraíba – IFPB
+Campos Cajazeiras 
+Curso: Análise e Desenvolvimento de Sistemas 
+Disciplina: LFWeb
+Professor: Francisco Genemes
+Aluno: Natarajan Rodrigues 
+-->
+<html>
+    <head>
+        <title>Centro Cultural Banco do Nordeste - Sousa</title>
+        <link rel="shortcut icon" href="../imagens/faviconccbnb.ico"/>
+        <meta charset="UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        
+        <link rel="stylesheet" type="text/css" href="agenda.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="menuscript.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+            <script type="text/javascript">// <![CDATA[
+            $(document).ready(function() {
+            function filterPath(string) {
+            return string
+            .replace(/^\//,'')
+            .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+            .replace(/\/$/,'');
+            }
+            $('a[href*=#]').each(function() {
+            if (filterPath(location.pathname) == filterPath(this.pathname)
+            && location.hostname == this.hostname
+            && this.hash.replace(/#/,'') ) {
+            var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+            var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+            if ($target) {
+            var targetOffset = $target.offset().top;
+            $(this).click(function() {
+            $('html, body').animate({scrollTop: targetOffset - 45}, 400);
+            return false;
+            });
+        }
+        }
+        });
+        });
+        // ]]></script>
+    </head>
+    <body>
+        <div class="barra-menu">
+            <a href="./index.html"><div class="logo-branca"></div></a>
+            
+            <div class="menu">
+            <ul>
+                <li><a href="./index.html"><span>Home</span></a></li>    
+                <li><a href="index.html#ultimasnoticias"><span>Notícias</span></a>
+                </li>    
+                <li><a href="#"><span>Programação</span></a>
+                    
+                    <ul>
+                        <li><a href="./agenda.html"><span>Agenda do Mês</span></a>
+                        <li><a href="#"><span>Especiais</span></a>
+                    </ul>
+                    
+                </li>
+                <li><a href="#"><span>Sobre o CCBNB</span></a>
+                    <ul>
+                        <li><a href="./sobreccbnb.html"><span>8 Anos</span></a>
+                        <li><a href="index.html#box-equipe"><span>Equipe</span></a>
+                    </ul>
+                </li>
+                <li><a href="./contato.html"><span>Contato</span></a>
+            </ul>
+            </div>
+            
+        </div>
+        
+        
+        
+        <div id="conteudo">
+            
+            
+            <div class="texto">
+            
+                <h1>Agenda Agosto/2015</h1>
+                <h2>Chegou a agenda do mês.<br> Destaques em oficinas e teatro</h2>
+                <p>
+                    Escolha um dia no calendário e confira a programação diária.<br>
+                    <!--Baixe a versão em PDF da agenda clicando <a href="#">aqui</a>.-->
+                </p>
+                
+            </div>
+            
+            <div >
+                <table class="calendario">
+                    <caption class="mes">Agosto 2015</caption>
+                    <thead>
+                        <tr>
+                            <td class="dia"><div class="semana">D</td>
+                            <td class="dia"><div class="semana">S</td>
+                            <td class="dia"><div class="semana">T</td>
+                            <td class="dia"><div class="semana">Q</td>
+                            <td class="dia"><div class="semana">Q</td>
+                            <td class="dia"><div class="semana">S</td>
+                            <td class="dia"><div class="semana">S</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td class="dia"></td>
+                        <td class="dia"></td>
+                        <td class="dia"></td>
+                        <td class="dia"></td>
+                        <td class="dia"></td>
+                        <td class="dia"></td>
+                        <td class="dia"><a href="#1">1</a></td>
+                    </tr>
+
+                    <tr>
+                        <td class="dia"><a href="#2">2</a></td>
+                        <td class="dia"><a href="#3">3</a></td>
+                        <td class="dia"><a href="#4">4</a></td>
+                        <td class="dia"><a href="#5">5</a></td>
+                        <td class="dia"><a href="#6">6</a></td>
+                        <td class="dia"><a href="#7">7</a></td>
+                        <td class="dia"><a href="#8">8</a></td>
+                    </tr>			
+
+                    <tr>
+                        <td class="dia"><a href="#9">9</a></td>
+                        <td class="dia"><a href="#10">10</a></td>
+                        <td class="dia"><a href="#11">11</a></td>
+                        <td class="dia"><a href="#12">12</a></td>
+                        <td class="dia"><a href="#13">13</a></td>
+                        <td class="dia"><a href="#14">14</a></td>
+                        <td class="dia"><a href="#15">15</a></td>
+                    </tr>
+
+                    <tr>
+                        <td class="dia"><a href="#16">16</a></td>
+                        <td class="dia"><a href="#17">17</a></td>
+                        <td class="dia"><a href="#18">18</a></td>
+                        <td class="dia"><a href="#19">19</a></td>
+                        <td class="dia"><a href="#20">20</a></td>
+                        <td class="dia"><a href="#21">21</a></td>
+                        <td class="dia"><a href="#22">22</a></td>
+                    </tr>
+
+                    <tr>
+                        <td class="dia"><a href="#23">23</a></td>
+                        <td class="dia"><a href="#24">24</a></td>
+                        <td class="dia"><a href="#25">25</a></td>
+                        <td class="dia"><a href="#26">26</a></td>
+                        <td class="dia"><a href="#27">27</a></td>
+                        <td class="dia"><a href="#28">28</a></td>
+                        <td class="dia"><a href="#29">29</a></td>
+                    </tr>
+
+                    <tr>
+                        <td class="dia"><a href="#30">30</a></td>
+                        <td class="dia"><a href="#31">31</a></td>
+                        <td class="dia"></td>
+                        <td class="dia"></td>
+                        <td class="dia"></td>
+                        <td class="dia"></td>
+                        <td class="dia"></td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+                    
+                
+            </div>
+            
+            <div class="agendatexto">
+                <div id="1">
+                    <h4>Dia 01, sábado</h4> 
+                    ATIVIDADES INFANTIS <br>
+                    14h Bibliotequinha Virtual (PB). 50min. <br>
+                    14h Oficina de Arte - Folclorizando (PB). 90min. <br>
+                    15h Bibliotequinha Virtual (PB). 50min. <br>
+                    16h Construindo Histórias - Reinventando o Vale dos Dinossauros! (PB). 60min. <br>
+                </div>
+                <div id="2">
+                    <h4 >Dia 02, domingo</h4>
+                    Centro Cultural Fechado <br>
+                    ARTE RETIRANTE - Artes Integradas <br>
+                    Local: FESTIVAL DE CINEMA 5º CURTA COREMAS - PB. <br>
+                    15h Debate - Linguagem e Composição Fotográfica no Cinema (PE). 60min. <br>
+                </div>
+                
+                <div id="3">
+                    <h4>Dia 03, segunda-feira </h4>
+                    Centro Cultural Fechado <br>
+                </div>
+                
+                <div id="4">
+                    <h4>Dia 04, terça-feira</h4>
+                    LITERATURA <br>
+                    19h Lançamento do Livro “Cinco Tempos em Cinco Textos” (MA). 180min. <br>
+                </div>
+                
+                
+                <div id="5">
+                    <h4>Dia 05, quarta-feira</h4>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA <br>
+                    14h O Quadro de Antagônicos como Instrumento de Treinamento para o Ator. (MA). 240min. <br>
+                    CINEMA <br>
+                    Série: Miyazaki, Uma Viagem pelo Cinema de Animação Japonês <br>
+                    19h Vidas ao Vento. 126min. <br>
+                </div>
+                
+                <div id="6">
+                    <h4>Dia 06, quinta-feira</h4>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA <br>
+                    14h O Quadro de Antagônicos como Instrumento de Treinamento para o Ator. (MA). 240min. <br>
+                    ARTES CÊNICAS <br>
+                    20h Teatro - Pai & Filho (MA). 60min. <br>
+                </div>
+                
+                <div id="7">
+                    <h4 > Dia 07, sexta-feira</h4>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    14h O Quadro de Antagônicos como Instrumento de Treinamento para o Ator. (MA). 240min.<br>
+                    14h Leituras Dramáticas: o quê, como e por quê? (MA). 240min.<br>
+                    ARTES CÊNICAS<br>
+                    20h Teatro - Pai & Filho (MA). 60min.<br>
+                </div>
+                
+                <div id="8">
+                    <h4 > Dia 08, sábado</h4>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    14h Leituras Dramáticas: o quê, como e por quê? (MA). 240min.<br>
+                    ATIVIDADES INFANTIS<br>
+                    14h Bibliotequinha Virtual (PB). 50min.<br>
+                    15h Construindo Histórias - Reinventando o Vale dos Dinossauros! (PB). 60min.<br>
+                    ARTES CÊNICAS<br>
+                    20h Teatro - Pai & Filho (MA). 60min.<br>
+                </div>
+                
+                <div id="9" >
+                    <h4 >Dia 09, domingo</h4>
+                    Centro Cultural Fechado<br>
+                </div>
+                <div id="10">
+                    <h4>Dia 10, segunda-feira</h4>
+                    Centro Cultural Fechado<br>
+                </div>
+                
+                
+                <div id="11">
+                    <h4 >Dia 11, terça-feira</h4>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    14h Leituras Dramáticas: o quê, como e por quê? (MA). 240min.<br>
+                    14h Do Épico ao Dramático: a Transposição de Gêneros como Instrumento<br>
+                    de Confecção de Dramaturgia. (MA). 240min.<br>
+                    ARTES CÊNICAS<br>
+                    20h Teatro - Pai & Filho (MA). 60min.<br>
+                </div>
+                
+                
+                <div id="12">
+                    <h4 >Dia 12, quarta-feira</h4>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    14h Do Épico ao Dramático: a Transposição de Gêneros como Instrumento<br>
+                    de Confecção de Dramaturgia. (MA). 240min.<br>
+                    ARTES CÊNICAS<br>
+                    20h Teatro - Pai & Filho (MA). 60min.<br>
+                </div>
+                
+                <div id="13">
+                    <h4>Dia 13, quinta-feira</h4>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    14h O que o meu corpo tem a dizer. (MA). 180min.<br>
+                    ARTES CÊNICAS<br>
+                    20h Teatro - Pai & Filho (MA). 60min.<br>
+                </div>
+                
+                <div id="14">
+                    <h4>Dia 14, sexta-feira</h4>
+                    Artes Integradas - ARTE RETIRANTE<br>
+                    Local: Biblioteca Municipal Humberto de Campos, Sousa - PB.<br>
+                    9h30 Contação de Histórias - Mitos e Lendas do Rio Cuiabá (MT). 60min.<br>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    14h O que o meu corpo tem a dizer. (MA). 180min.<br>
+                    ATIVIDADES INFANTIS<br>
+                    14h30 Contação de Histórias - Mitos e Lendas do Rio Cuiabá (MT). 60min.<br>
+                    Artes Integradas - ARTE RETIRANTE<br>
+                    Local: Fesmuza, Comunidade São Francisco, São João do Rio do Peixe - PB.<br>
+                    20h Música -Spydo Rei (PB). 60min.<br>
+                    ARTES CÊNICAS<br>
+                    20h Teatro - Pai & Filho (MA). 60min.<br>
+                </div>
+                
+                <div id="15">
+                    <h4>Dia 15, sábado</h4>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    14h O que o meu corpo tem a dizer. (MA). 180min.<br>
+                    ATIVIDADES INFANTIS<br>
+                    14h Bibliotequinha Virtual (PB). 50min.<br>
+                    15h Contação de Histórias - Mitos e Lendas do Rio Cuiabá (MT). 60min.<br>
+                    16h Oficina de Arte - Objetos Sonoros (MT). 90min.<br>
+                    Artes Integradas - ARTE RETIRANTE<br>
+                    Local: Teatro Murarte, Pombal – PB.<br>
+                    19h30 Debate - Mostra e Debate sobre a Nova Produção de Cinema Paraibano (PB). 90min.<br>
+                    ARTES CÊNICAS<br>
+                    20h Teatro - Pai & Filho (MA). 60min.<br>
+                </div>
+                
+                <div id="16">
+                    <h4>Dia 16, domingo</h4>
+                    Centro Cultural Fechado<br>
+                    Artes Integradas - ARTE RETIRANTE<br>
+                    Local: Escola Mestre Júlio Sarmento, Sousa-PB.<br>
+                    19h Banda Shogun. 60min.<br>
+                </div>
+                
+                <div id="17">
+                    <h4>Dia 17, segunda-feira</h4>
+                    Centro Cultural Fechado<br>
+                </div>
+                
+                <div id="18">
+                    <h4>Dia 18, terça-feira</h4>
+                    Artes Integradas - ARTE RETIRANTE<br>
+                    Local: CRAS, Mutirão, Sousa – PB.<br>
+                    13h Oficina - Iniciação ao Cinema e Set de Filmagem (RJ). 240min.<br>
+                    Local: Santa Helena – PB.<br>
+                    14h Oficina - Danças Populares (PB). 240min.<br>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    17h A Escritura Fotográfica: Do Registro da Realidade à Criação de Mitos e Espelhos (PB). 240min.<br>
+                    Literatura/Biblioteca - CONVERSAS FILOSÓFICAS<br>
+                    19h Schopenhauer & Nietzsche: Desmistificando o Pessimismo (PB). 120min.<br>
+                </div>
+                
+                <div id="19">
+                    <h4>Dia 19, quarta-feira</h4>
+                    Artes Integradas - ARTE RETIRANTE<br>
+                    Local: CRAS, Mutirão, Sousa – PB.<br>
+                    13h Oficina - Iniciação ao Cinema e Set de Filmagem (RJ). 240min.<br>
+                    Local: Santa Helena – PB.<br>
+                    14h Oficina - Danças Populares (PB). 240min.<br>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    17h A Escritura Fotográfica: Do Registro da Realidade à Criação de Mitos e Espelhos (PB). 240min.<br>
+                    CINEMA<br>
+                    Série: Miyazaki, Uma Viagem pelo Cinema de Animação Japonês<br>
+                    19h Ponyo: Uma Amizade que Veio do Mar. 100min.<br>
+                </div>
+                <div id="20">
+                    <h4>Dia 20, quinta-feira</h4>
+                    Artes Integradas - ARTE RETIRANTE<br>
+                    Local: CRAS, Mutirão, Sousa – PB.<br>
+                    13h Oficina - Iniciação ao Cinema e Set de Filmagem (RJ). 240min.<br>
+                    Local: Santa Helena – PB.<br>
+                    14h Oficina - Danças Populares (PB). 240min.<br>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    17h A Escritura Fotográfica: Do Registro da Realidade à Criação de Mitos e Espelhos (PB). 240min.<br>
+                    CINEMA<br>
+                    Série: Miyazaki, Uma Viagem pelo Cinema de Animação Japonês<br>
+                    19h O Castelo Animado. 120min.<br>
+                </div>
+                <div id="21">
+                    <h4>Dia 21, sexta-feira</h4>
+                    Artes Integradas - ARTE RETIRANTE<br>
+                    Local: CRAS, Mutirão, Sousa – PB.<br>
+                    13h Oficina - Iniciação ao Cinema e Set de Filmagem (RJ). 240min.<br>
+                    Local: Santa Helena – PB.<br>
+                    14h Oficina - Danças Populares (PB). 240min.<br>
+                    ARTES VISUAIS<br>
+                    14h Intervenção Urbana - Paredes que Falam (PB). 300min.<br>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    17h A Escritura Fotográfica: Do Registro da Realidade à Criação de Mitos e Espelhos (PB). 240min.<br>
+                    LITERATURA<br>
+                    19h Poesias e Cordéis (MA). 60min.<br>
+                </div>
+                <div id="22">
+                    <h4>Dia 22, sábado</h4>
+                    ARTES VISUAIS<br>
+                    14h Intervenção Urbana - Toque (PB). 300min.<br>
+                    ATIVIDADES INFANTIS<br>
+                    14h Bibliotequinha Virtual (PB). 50min.<br>
+                    15h Bibliotequinha Virtual (PB). 50min.<br>
+                    TRADIÇÃO CULTURAL<br>
+                    Local: Calçadão Mundinho Teodoro (ao lado do CCBNB), Sousa - PB.<br>
+                    19h Grupo Caboclos do Mestre Bebé (RN). 40min.<br>
+                    20h Grupo Rei de Congo do Mestre Bebé (RN). 40min.<br>
+                </div>
+                <div id="23">
+                    <h4>Dia 23, domingo</h4>
+                    Centro Cultural Fechado<br>
+                </div>
+                <div id="24">
+                    <h4>Dia 24, segunda-feira</h4>
+                    Centro Cultural Fechado<br>
+                </div>
+                <div id="25">
+                    <h4>Dia 25, terça-feira</h4>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    17h Mangá (PB). 240min.<br>
+                    CINEMA<br>
+                    Série: Miyazaki, Uma Viagem pelo Cinema de Animação Japonês<br>
+                    19h A Viagem de Chihiro. 125min.<br>
+                </div>
+                <div id="26">
+                    <h4>Dia 26, quarta-feira</h4>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    17h Mangá (PB). 240min.<br>
+                    MÚSICA<br>
+                    19h30 Gitana Pimentel (PB). 60min.<br>
+                </div>
+                <div id="27">
+                    <h4>Dia 27, quinta-feira</h4>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    17h Mangá (PB). 240min.<br>
+                    Artes Integradas - ARTE RETIRANTE<br>
+                    Local: III Festival de Música Popular - FEMPOP, Praça Pública, Pombal - PB.<br>
+                    22h Gitana Pimentel (PB) 60min.<br>
+                </div>
+                <div id="28">
+                    <h4>Dia 28, sexta-feira</h4>
+                    Artes Integradas - OFICINA DE FORMAÇÃO ARTÍSTICA<br>
+                    17h Mangá (PB). 240min.<br>
+                    Artes Integradas - ARTE RETIRANTE  <br>
+                    Local: IFPB, Cajazeiras – PB.<br>
+                    18h30 Debate - Cultura e Games (PB). 60min.<br>
+                    Artes Integradas - ARTE RETIRANTE<br>
+                    Local: NEC/UFCG, Cajazeiras - PB.<br>
+                    21h Conjunto Roque Moreira (PI). 60min.<br>
+                    TRADIÇÃO CULTURAL<br>
+                    19h30 Retalhos da Nossa História (PB). 50min.<br>
+                </div>
+                <div id="29">
+                    <h4>Dia 29, sábado</h4>
+                    ATIVIDADES INFANTIS<br>
+                    14h Oficina de Arte - Folclorizando (PB). 90min.<br>
+                    15h Construindo Histórias - Reinventando o Vale dos Dinossauros! (PB). 60min.<br>
+                    Literatura/Biblioteca - CLUBE DO LEITOR<br>
+                    15h Quem Vigia os Vigilantes? Um bate-papo sobre Watchmen (PB). 120min.<br>
+                    TROCA DE IDEIAS<br>
+                    19h Cultura e Games (PB). 60min.<br>
+                    MÚSICA<br>
+                    20h Conjunto Roque Moreira (PI). 60min.<br>
+                </div>
+                <div id="30">
+                    <h4>Dia 30, domingo</h4>
+                    Centro Cultural Fechado<br>
+                </div>
+                <div id="31">
+                    <h4>Dia 31, segunda-feira</h4>
+                    Centro Cultural Fechado<br>
+                </div>
+
+            
+            </div>
+            
+            
+            
+        </div>
+        
+
+        <a href='#' class='icontop'></a>
+        
+        
+
+        <div class="bottom">
+            <div class="barra-social-midia">
+                <a href="http://www.facebook.com/ccbnbsousa" class="icone-face"></a>
+                <a href="#" class="icone-twitter"></a>
+                <a href="#" class="icone-youtube"></a>
+            </div>
+            <div>
+                <p>Natarajan Rodrigues</p>
+            </div>    
+        </div>
+        
+    </body>
+</html>

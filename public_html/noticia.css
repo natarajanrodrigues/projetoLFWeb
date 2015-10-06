@@ -1,0 +1,195 @@
+/*
+
+Instituto Federal de Educação Ciências e Tecnologia da Paraíba – IFPB
+Campos Cajazeiras 
+Curso: Análise e Desenvolvimento de Sistemas 
+Disciplina: LFWeb
+Professor: Francisco Genemes
+Aluno: Natarajan Rodrigues 
+
+
+Projeto referente à 2a Avaliação da Disciplina
+
+*/
+
+
+#conteudo{
+    display: block;
+    width: 100%;
+    min-height: 600px;
+}
+
+.imageminicial{
+    position: fixed;
+    top: 0;
+    animation-delay: 1s; 
+    animation: myanimation 1s;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.imageminicial img{
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    object-fit: cover;
+}
+
+.texto *{
+    padding: 30px;
+    
+}
+
+.texto{
+    
+    position: relative;
+    background-color: rgba(255,255,255,0.95);
+    margin-top: 40%;
+    margin-bottom: 10%;
+    padding: 30px;
+    width: 70%;
+    min-height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.52);
+}
+
+.texto h1{
+    text-align: center;
+    padding: 40px 0 40px 0;
+    color: rgba(211,6,16,1);
+    text-shadow: 2px 1px 2px rgba(53,100,1,0.1), 0 1px 5px rgba(0,0,0,0.24);
+}
+
+.texto h2{
+    
+    text-align: center;
+    font-size: 1em;
+    color: rgba(211,128,128,1);
+    text-shadow: 1px rgba(53,100,1,0.4);
+    padding: 0 0 20px 0 ;
+}
+
+.texto p{
+    text-align: justify;
+    line-height: 1.8em;
+    
+}
+
+.bottom{
+    position: absolute;
+    bottom: 0;
+}
+
+
+@keyframes myanimation{
+    
+    0% {
+        margin-top: -40%;
+        opacity: 0.5;
+        transform: rotateX(-90deg) translateZ(300px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg) translateZ(0px);        
+    }
+}
+
+
+
+.imagem-esquerda, .imagem-direita{
+    width: 30%;
+    height: 100%;
+    float: left;
+    object-fit: cover;
+}
+
+.imagem-direita{
+    
+    float: right;
+}
+
+
+.bottom{
+    position: relative;
+}
+
+
+@media only screen and (max-width: 800px){
+    #conteudo{
+        width: 100%;
+    }
+    
+    .imageminicial{
+        height: 20em;
+        z-index: 0;
+    }
+    
+    .texto *{
+        padding: 0px;
+
+    }
+
+    .texto{
+        position: relative;
+        z-index: 2;
+        background-color: white;
+        width: 80%;
+        min-height: 300px;
+        margin-top: 18em;
+    }
+
+    .texto h1{
+        padding: 20px 0 20px 0;
+        font-size: 1.5em;
+    }
+
+    .texto h2{
+        padding: 0 0 20px 0 ;
+    }
+
+    .texto p{
+        font-size: 0.9em;
+        text-align: justify;
+        padding: 5px 5px 5px 5px;
+        line-height: 1.5em;
+
+    }
+
+    .imagem-esquerda, .imagem-direita{
+        width: 60%;
+        display: block;
+        float: none;
+        padding: 5px 5px 5px 5px;
+    }
+
+    .imagem-direita{
+
+    }
+    
+    iframe{
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+    }
+    
+    /* CONFIGURAÇÕES MEDIA QUERIES PARA SMARTPHONES*/
+    /* CONFIGURAÇÕES PARA LANDSCAPE*/
+    @media only screen and (max-height: 360px) and (orientation: landscape){
+
+        .imagem-esquerda, .imagem-direita{
+            width: 100%;
+        }
+        
+    }
+    
+    /* DEMAIS CONFIGURAÇÕES PARA SMARTPHONES */
+    @media only screen and (max-width: 640px) {
+       .imagem-esquerda, .imagem-direita{
+            width: 100%;
+        }
+    }
+    
+}

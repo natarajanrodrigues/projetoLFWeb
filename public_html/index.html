@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--
+Instituto Federal de Educação Ciências e Tecnologia da Paraíba – IFPB
+Campos Cajazeiras 
+Curso: Análise e Desenvolvimento de Sistemas 
+Disciplina: LFWeb
+Professor: Francisco Genemes
+Aluno: Natarajan Rodrigues 
+-->
+<html>
+    <head>
+        <title>Centro Cultural Banco do Nordeste - Sousa</title>
+        <link rel="shortcut icon" href="../imagens/faviconccbnb.ico"/>
+        <meta charset="UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="agenda.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="menuscript.js"></script>
+        
+        <!-- Script para scroll fluído usado para os links com âncoras-->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+            <script type="text/javascript">// <![CDATA[
+            $(document).ready(function() {
+            function filterPath(string) {
+            return string
+            .replace(/^\//,'')
+            .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+            .replace(/\/$/,'');
+            }
+            $('a[href*=#]').each(function() {
+            if ( filterPath(location.pathname) == filterPath(this.pathname)
+            && location.hostname == this.hostname
+            && this.hash.replace(/#/,'') ) {
+            var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+            var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+            if ($target) {
+            var targetOffset = $target.offset().top;
+            $(this).click(function() {
+            $('html, body').animate({scrollTop: targetOffset - 45}, 400);
+            return false;
+            });
+        }
+        }
+        });
+        });
+        // ]]></script>
+            
+            
+    </head>
+    <body>
+        <div class="barra-menu">
+            <a href="./index.html"><div class="logo-branca"></div></a>
+            
+            <div class="menu">
+            <ul>
+                <li><a href="#"><span>Home</span></a></li>    
+                <li><a href="#ultimasnoticias"><span>Notícias</span></a></li>    
+                <li><a href="#"><span>Programação</span></a>
+                    
+                    <ul>
+                        <li><a href="./agenda.html"><span>Agenda do Mês</span></a>
+                        <li><a href="#"><span>Especiais</span></a>
+                    </ul>
+                    
+                </li>
+                <li><a href="#"><span>Sobre o CCBNB</span></a>
+                    <ul>
+                        <li><a href="./sobreccbnb.html"><span>8 Anos</span></a>
+                        <li><a href="#box-equipe"><span>Equipe</span></a>
+                    </ul>
+                </li>
+                <li><a href="./contato.html"><span>Contato</span></a>
+            </ul>
+            </div>
+            
+        </div>
+        
+        
+        <div id="boxslides">
+        
+        <ul class="slides">
+            <input type="radio" name="radio-btn" id="img-1" checked />
+            
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="../imagens/quintaldeluiz2.jpg" alt="Quinta de Luiz">
+                    
+                </div>
+                
+                <div class="manchete">
+                    <a href="./quintaldeluiz.html">Quintal de Luis: espetáculo especial </a>
+                </div>
+                
+                <div class="nav">
+                    <label for="img-3" class="prev">&#x2039;</label>
+                    <label for="img-2" class="next">&#x203a;</label>
+                </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-2" />
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="../imagens/fachadaCCBNB2.jpg" />
+                </div>
+                
+                <div class="manchete">
+                    <a href="./sobreccbnb.html">CCBNB 8 ANOS</a>
+                </div>
+                
+                <div class="nav">
+                        <label for="img-1" class="prev">&#x2039;</label>
+                        <label for="img-3" class="next">&#x203a;</label>
+                </div>
+            </li>
+            <input type="radio" name="radio-btn" id="img-3" />
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="../imagens/cabure_capa.jpg" />
+                </div>
+                <div class="manchete">
+                    <a href="./noticia1.html">Música: Caburé Carimbó Clube</a>
+                </div>
+                <div class="nav">
+                        <label for="img-2" class="prev">&#x2039;</label>
+                        <label for="img-1" class="next">&#x203a;</label>
+                </div>
+            </li>
+
+            <li class="nav-dots">
+              <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+              <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+              <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+            </li>
+        </ul>
+        </div>        
+        
+        
+        <div class='conteudo-noticias-equipe clearfix'>
+        
+            <div class="noticias">
+                <div id="ultimasnoticias" class="titulo-noticias">Últimas Notícias</div>
+                
+                <div class="box-noticia">
+                    
+                    <div class="box-imagem">
+                        <img src="../imagens/quintaldeluiz3.jpg" alt="arrail">
+                    </div>
+                    <h1>Especial Aniversário</h1>
+                    <h2><a href="./quintaldeluiz.html">Espetáculo "Quintal de Luis" no 8º Aniversário do CCBNB-Sousa</a></h2>
+                    
+                    <a href="1" class='sprite facebook_logo'></a>
+                    <a href="2" class='sprite google-plus-logo'></a>
+                    <a href="3" class='sprite twitter-logo'></a>
+                    
+                </div>
+                
+                <div class="box-noticia">
+                    <div class="box-imagem">
+                        <img src="../imagens/cabure2.jpg" alt="Caburé Carimbó Clube">    
+                    </div>
+                    
+                    <h1>Especial Aniversário</h1>
+                    <h2 class="atalho"><a href="./noticia1.html">Caburé Carimbó Clube faz show no 8º Aniversário</a></h2>
+                    
+                    <a href="1" class='sprite facebook_logo'></a>
+                    <a href="2" class='sprite google-plus-logo'></a>
+                    <a href="3" class='sprite twitter-logo'></a>
+                    
+                </div>
+                
+                <div class="box-noticia">
+                    <div class="box-imagem">
+                        <img src="../imagens/noticias/felipe cazaux.png" alt="Felipe Cazaux">
+                    </div>
+                    <h1>Relembre</h1>
+                    <h2 class="atalho"><a href="./felipecazaux.html">Felipe Cazaux no CCBNB-Sousa em 2010</a></h2>
+                    
+                    <a href="1" class='sprite facebook_logo'></a>
+                    <a href="2" class='sprite google-plus-logo'></a>
+                    <a href="3" class='sprite twitter-logo'></a>
+                    
+                </div>
+                
+                
+            </div>
+            
+            
+            
+            <div id="box-equipe" class='equipe clearfix'>
+                <div class='titulo-equipe'>Equipe</div>
+                
+                <div class="personagem">
+                    <img src="../imagens/equipe/rose.jpg" alt="rose" title="Coordenadora de Artes Cênicas">
+                    <h1>Rose</h1>
+                </div>
+                <div class="personagem">
+                    <img src="../imagens/equipe/kleyner.jpg" alt="kleyner" title="Gerente">
+                    <h1>Kleyner</h1>
+                </div>
+                <div class="personagem">
+                    <img src="../imagens/equipe/natarajan2.jpg" alt="natarajan" title="Consultor Cultural">
+                    <h1>Natarajan</h1>
+                </div>
+                <div class="personagem">
+                    <img src="../imagens/equipe/ellida.jpg" alt="ellida" title="Auxiliar de Biblioteca">
+                    <h1>Éllida</h1>
+                </div>
+                <div class="personagem">
+                    <img src="../imagens/equipe/clara.jpg" alt="clara" title="Recepcionista">
+                    <h1>Clara</h1>
+                </div>
+                <div class="personagem">
+                    <img src="../imagens/equipe/jackson.jpg" alt="jackson" title="Auxiliar de Biblioteca">
+                    <h1>Jackson</h1>
+                </div>
+                <div class="personagem">
+                    <img src="../imagens/equipe/irismar.jpg" alt="irismar" title="Recepcionista">
+                    <h1>Irismar</h1>
+                </div>
+                <div class="personagem">
+                    <img src="../imagens/equipe/ogna.jpg" alt="ogna" title="Bibliotecária">
+                    <h1>Ogna</h1>
+                </div>
+                <div class="personagem">
+                    <img src="../imagens/equipe/rodrigo.jpg" alt="rodrigo" title="Técnico de som e luz">
+                    <h1>Rodrigo</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="barra-social-midia">
+                <a href="http://www.facebook.com/ccbnbsousa" class="icone-face"></a>
+                <a href="http://twitter.com/CCBNBSousa" class="icone-twitter"></a>
+                <a href="http://www.youtube.com/user/centroculturalbnb" class="icone-youtube"></a>
+            </div>
+            <div>
+                <p>Natarajan Rodrigues</p>
+            </div>    
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,229 @@
+/*
+
+Instituto Federal de Educação Ciências e Tecnologia da Paraíba – IFPB
+Campos Cajazeiras 
+Curso: Análise e Desenvolvimento de Sistemas 
+Disciplina: LFWeb
+Professor: Francisco Genemes
+Aluno: Natarajan Rodrigues 
+
+
+Projeto referente à 2a Avaliação da Disciplina
+
+*/
+
+
+#conteudo{
+    position:relative;
+    width: 70%;
+    padding: 50px;
+}
+
+
+.texto{
+    padding: 10px;
+}
+
+.texto h1{
+    text-align: center;
+    padding: 40px 0 10px 0;
+    color: rgba(211,6,16,1);
+    text-shadow: 1px 0px 3px rgba(53,100,1,0.4);
+}
+
+.texto h2{
+    
+    text-align: center;
+    font-size: 1em;
+    color: rgba(211,128,128,1);
+    text-shadow: 1px rgba(53,100,1,0.4);
+    padding: 0 0 20px 0 ;
+}
+
+.texto p{
+    text-align: justify;
+    line-height: 1.8em;
+    
+}
+
+.agendatexto > div{
+    font-size: 1em;
+    font-style: normal;
+    padding-bottom: 30px;
+}
+
+.ancora{
+    position: relative;
+    top: 45px;
+}
+
+.agendatexto h4{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.calendario{
+    margin: 50px;
+    margin-left: 0;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.12), 0 1px 5px rgba(0,0,0,0.24);
+    border-radius: 5px 5px 5px 5px;
+    background: #ffffff;
+    
+}
+
+
+.mes {
+    position: relative;
+    background: #ff3333;
+    font-size: 1em;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 5px 1px;
+    border-radius: 5px 5px 0px 0px;
+    width: 100%;
+    line-height: 20px;
+}
+
+.semana {
+    font-size: 1em;
+    background: #b1f2f3;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4em;						  
+}
+
+.dia {
+    font-size: 1em ;				  
+    text-align: center;
+    height: 20px;
+    width: 30px;
+}
+
+.dia a {
+    text-decoration: none;
+}
+
+.dia a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+.dia a:hover{
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot?-9f1csz');
+    src:url('fonts/icomoon.eot?#iefix-9f1csz') format('embedded-opentype'),
+        url('fonts/icomoon.woff?-9f1csz') format('woff'),
+        url('fonts/icomoon.ttf?-9f1csz') format('truetype'),
+        url('fonts/icomoon.svg?-9f1csz#icomoon') format('svg');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icontop:before{
+    z-index:999;
+    font-family: 'icomoon';
+    color: white;
+    content: 'top \e130';
+    top: 45%;
+    position: fixed;
+    background: rgba(211,6,16,0.7);
+    margin: 0 auto;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 0px 8px 8px 0px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.7);
+    width:130px; 
+    height:100px;
+    line-height: 100px;
+    vertical-align:middle;
+}
+
+
+
+@media only screen and (max-width: 800px){
+    
+    
+    #conteudo{
+        width: 80%;
+        padding: 0;
+
+    }
+    
+    .texto{
+        padding: 10px;
+    }
+
+    .texto h1{
+        font-size: 1.2em;
+        text-align: center;
+        padding: 40px 0 10px 0;
+        
+    }
+
+    .texto h2{
+        font-size: 0.6em;
+        text-align: center;
+        font-size: 1em;
+        
+        padding: 0 0 20px 0 ;
+    }
+
+    .texto p{
+        font-size:0.8em;
+        line-height: 1em;
+
+    }
+
+    .agendatexto > div{
+        font-size: 0.8em;
+        padding-bottom: 30px;
+    }
+
+    .agendatexto h4{
+    
+    }
+
+    .calendario{
+        max-width:100%;
+        margin-left: 0;
+    }
+
+    
+    .icontop:before{
+        content: '\e130';
+        font-size: 1em;
+        width:8%; 
+        height:50px;
+        line-height: 3em;
+    }
+    
+    
+    /* CONFIGURAÇÕES MEDIA QUERIES PARA SMARTPHONES*/
+    /* CONFIGURAÇÕES PARA LANDSCAPE*/
+    @media only screen and (max-height: 360px) and (orientation: landscape){
+        .calendario{
+            width: 100%;
+        }
+        .icontop{
+            display: none;
+        }
+    }
+    
+    /* DEMAIS CONFIGURAÇÕES PARA SMARTPHONES */
+    @media only screen and (max-width: 640px) {
+        .calendario{
+            width: 100%;
+        }
+        .icontop{
+            display: none;
+        }
+    }
+    
+}
